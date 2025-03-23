@@ -1,0 +1,681 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0208.0338                               -->
+<workbook original-version='18.1' source-build='2024.3.4 (20243.25.0208.0338)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Year Parameter' datatype='integer' name='[参数 1]' param-domain-type='list' role='measure' type='quantitative' value='2019'>
+        <calculation class='tableau' formula='2019' />
+        <members>
+          <member value='2021' />
+          <member value='2020' />
+          <member value='2019' />
+          <member value='2018' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Orders (Sample - Superstore) 数据提取' inline='true' name='federated.03kc8jn1aoj932112cox813gqdft' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Orders (Sample - Superstore)' name='hyper.1buue841660um41baiwtc0ke2fu2'>
+            <connection authentication='auth-none' author-locale='zh_CN' class='hyper' dbname='C:/Users/38681/Desktop/superstore项目表/Orders (Sample - Superstore).hyper' default-settings='yes' server='' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+        </named-connections>
+        <relation connection='hyper.1buue841660um41baiwtc0ke2fu2' name='Extract' table='[Extract].[Extract]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Row ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Row ID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Row ID</remote-alias>
+            <ordinal>0</ordinal>
+            <family>Orders</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>9994</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>3173</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <family>Orders</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <approx-count>1392</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Ship Date]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Ship Date</remote-alias>
+            <ordinal>3</ordinal>
+            <family>Orders</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <approx-count>1487</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Mode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ship Mode]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Ship Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1048</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>6</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1048</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Segment]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Segment</remote-alias>
+            <ordinal>7</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>3</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country/Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country/Region]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Country/Region</remote-alias>
+            <ordinal>8</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>9</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>500</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>10</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>51</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>11</ordinal>
+            <family>Orders</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>610</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>12</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>13</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2051</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>14</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>3</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sub-Category]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Sub-Category</remote-alias>
+            <ordinal>15</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>17</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product Name]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Product Name</remote-alias>
+            <ordinal>16</ordinal>
+            <family>Orders</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2025</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>17</ordinal>
+            <family>Orders</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>3481</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>18</ordinal>
+            <family>Orders</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>14</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>19</ordinal>
+            <family>Orders</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>11</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>20</ordinal>
+            <family>Orders</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>3859</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Sales label' datatype='string' name='[Calculation_1284088903273066506]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='&apos;$&apos;&#13;&#10;+&#13;&#10;str(round(SUM([Sales])/&#13;&#10;(&#13;&#10;case true&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=3 then 1&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=6 then 1000&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=9 then 1000000&#13;&#10;else 1000000000&#13;&#10;end&#13;&#10;),1&#13;&#10;)&#13;&#10;)&#13;&#10;+&#13;&#10;case true&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=3 then &apos;&apos;&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=6 then &apos;K&apos;&#13;&#10;when len(str(INT(SUM([Sales]))))&lt;=9 then &apos;M&apos;&#13;&#10;else &apos;B&apos;&#13;&#10;end' />
+      </column>
+      <column caption='YOY% Sales' datatype='real' name='[Calculation_1284088903277297675]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(ZN(IF YEAR([Order Date])=[Parameters].[参数 1] then [Sales] ELSE NULL end)-ZN(IF YEAR([Order Date])=[Parameters].[参数 1]-1 then [Sales] ELSE NULL end))/sum(ZN(IF YEAR([Order Date])=[Parameters].[参数 1]-1 then [Sales] ELSE NULL end))' />
+      </column>
+      <column caption='YOY% color' datatype='string' name='[Calculation_1284088903279230988]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='if [Calculation_1284088903277297675]&gt;0 then &apos;Positive&apos;&#13;&#10;ELSEIF [Calculation_1284088903277297675]&lt;0 then &apos;Negative&apos;&#13;&#10;ELSE &apos;Not change&apos;&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column aggregate-role-from='[State]' datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Row ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Extract' datatype='table' name='[__tableau_internal_object_id__].[Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1284088903279230988]' derivation='User' name='[usr:Calculation_1284088903279230988:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Region, State'>
+          <field>[Region]</field>
+          <field>[State]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903270817799:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903271387145:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_1284088903279230988:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;美国&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Row ID' />
+        <field-sort-custom-order field='Order ID' />
+        <field-sort-custom-order field='Order Date' />
+        <field-sort-custom-order field='Ship Date' />
+        <field-sort-custom-order field='Ship Mode' />
+        <field-sort-custom-order field='Customer ID' />
+        <field-sort-custom-order field='Customer Name' />
+        <field-sort-custom-order field='Segment' />
+        <field-sort-custom-order field='Country/Region' />
+        <field-sort-custom-order field='City' />
+        <field-sort-custom-order field='State' />
+        <field-sort-custom-order field='Postal Code' />
+        <field-sort-custom-order field='Region' />
+        <field-sort-custom-order field='Product ID' />
+        <field-sort-custom-order field='Category' />
+        <field-sort-custom-order field='Sub-Category' />
+        <field-sort-custom-order field='Product Name' />
+        <field-sort-custom-order field='Sales' />
+        <field-sort-custom-order field='Quantity' />
+        <field-sort-custom-order field='Discount' />
+        <field-sort-custom-order field='Profit' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='Calculation_1284088903273066506' />
+        <field-sort-custom-order field='Calculation_1284088903277297675' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Year Parameter' datatype='integer' name='[参数 1]' param-domain-type='list' role='measure' type='quantitative' value='2019'>
+          <calculation class='tableau' formula='2019' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Extract' id='Extract (Extract.Extract)_ACF4ECF65C4E4741974B7F330EAC86D5'>
+            <properties context=''>
+              <relation connection='hyper.1buue841660um41baiwtc0ke2fu2' name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='销售额年同比'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders (Sample - Superstore) 数据提取' name='federated.03kc8jn1aoj932112cox813gqdft' />
+            <datasource caption='参数' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Year Parameter' datatype='integer' name='[参数 1]' param-domain-type='list' role='measure' type='quantitative' value='2019'>
+              <calculation class='tableau' formula='2019' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.03kc8jn1aoj932112cox813gqdft'>
+            <column caption='YOY% Sales' datatype='real' name='[Calculation_1284088903277297675]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum(ZN(IF YEAR([Order Date])=[Parameters].[参数 1] then [Sales] ELSE NULL end)-ZN(IF YEAR([Order Date])=[Parameters].[参数 1]-1 then [Sales] ELSE NULL end))/sum(ZN(IF YEAR([Order Date])=[Parameters].[参数 1]-1 then [Sales] ELSE NULL end))' />
+            </column>
+            <column caption='YOY% color' datatype='string' name='[Calculation_1284088903279230988]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='if [Calculation_1284088903277297675]&gt;0 then &apos;Positive&apos;&#13;&#10;ELSEIF [Calculation_1284088903277297675]&lt;0 then &apos;Negative&apos;&#13;&#10;ELSE &apos;Not change&apos;&#13;&#10;END' />
+            </column>
+            <column caption='0' datatype='integer' name='[Calculation_1284088903281405966]' role='measure' type='quantitative' user:unnamed='销售额年同比'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column caption='0' datatype='integer' name='[Calculation_1284088903281520656]' role='measure' type='quantitative' user:unnamed='销售额年同比'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column caption='[Year Parameter]-1' datatype='integer' name='[Calculation_1284088903281737745]' role='measure' type='quantitative' user:unnamed='销售额年同比'>
+              <calculation class='tableau' formula='[Parameters].[参数 1]-1' />
+            </column>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column aggregate-role-from='[State]' datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1284088903281737745]' derivation='None' name='[none:Calculation_1284088903281737745:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1284088903281405966]' derivation='Sum' name='[sum:Calculation_1284088903281405966:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1284088903281520656]' derivation='Sum' name='[sum:Calculation_1284088903281520656:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1284088903277297675]' derivation='User' name='[usr:Calculation_1284088903277297675:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1284088903279230988]' derivation='User' name='[usr:Calculation_1284088903279230988:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903277297675:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903277297675:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281520656:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281405966:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281520656:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903277297675:qk]' value='*▲#,###0.0%;▼#,###0.0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.03kc8jn1aoj932112cox813gqdft].[none:Region:nk]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281405966:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <color column='[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903279230988:nk]' />
+              <text column='[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903277297675:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'>&lt;</run>
+                <run bold='true'>[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903277297675:qk]</run>
+                <run bold='true'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281520656:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.03kc8jn1aoj932112cox813gqdft].[none:Calculation_1284088903281737745:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Æ&#10;&#10;</run>
+                <run fontsize='8'><![CDATA[vs. <[federated.03kc8jn1aoj932112cox813gqdft].[none:Calculation_1284088903281737745:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03kc8jn1aoj932112cox813gqdft].[none:Region:nk]</rows>
+        <cols>([federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281405966:qk] + [federated.03kc8jn1aoj932112cox813gqdft].[sum:Calculation_1284088903281520656:qk])</cols>
+      </table>
+      <simple-id uuid='{A5B819CD-184D-4F6A-9AD4-15827B086A70}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='销售额年同比'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[参数 1]' type='parameter' />
+            <card pane-specification-id='1' param='[federated.03kc8jn1aoj932112cox813gqdft].[usr:Calculation_1284088903279230988:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.03kc8jn1aoj932112cox813gqdft].[none:Calculation_1284088903281737745:qk]</field>
+            <field>[federated.03kc8jn1aoj932112cox813gqdft].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{42E16213-3517-49C3-A653-E7F923BE3422}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='销售额年同比' width='192'>
+      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
+      pgDENAUgpv0bSFSxN3JUv0EAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
